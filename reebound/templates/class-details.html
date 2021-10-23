@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="{% static 'img/breadcrumb-bg.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h2>Classes detail</h2>
+                        <div class="bt-option">
+                            <a href="./index.html">Home</a>
+                            <a href="#">Classes</a>
+                            <span>Body building</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+
+    <!-- Class Timetable Section Begin -->
+    <section class="class-timetable-section class-details-timetable spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="class-details-timetable_title">
+                        <h5>Classes timetable</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="class-timetable details-timetable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Monday</th>
+                                    <th>Tuesday</th>
+                                    <th>Wednesday</th>
+                                    <th>Thursday</th>
+                                    <th>Friday</th>
+                                    <th>Saturday</th>
+                                    <th>Sunday</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    {% for i in ttable %}
+                                    <td class="class-time">{{ i.time }}</td>
+                                    <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
+                                        <h5>{{ i.mondayworkout }}</h5>
+                                        <span>{{ i.monday_trainer }}</span>
+                                    </td>
+                                    <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
+                                        <h5>{{ i.Tuesdayworkout }}</h5>
+                                        <span>{{ i.Tuesday_trainer }}</span>
+                                    </td>
+                                    <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
+                                        <h5>{{ i.Wednesdayworkout }}</h5>
+                                        <span>{{ i.Wednesday_trainer }}</span>
+                                    </td>
+                                    <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
+                                        <h5>{{ i.Thusdayworkout }}</h5>
+                                        <span>{{ i.Thusday_trainer }}</span>
+                                    </td>
+                                    <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
+                                        <h5>{{ i.Fridayworkout }}</h5>
+                                        <span>{{ i.Friday_trainer }}</span>
+                                    </td>
+                                    <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
+                                        <h5>{{ i.Saturdayworkout }}</h5>
+                                        <span>{{ i.Saturday_trainer }}</span>
+                                    </td>
+                                    <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
+                                        <h5>{{ i.Sundayworkout }}</h5>
+                                        <span>{{ i.Sunday_trainer }}</span>
+                                    </td>
+                                    {% endfor %}
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Class Timetable Section End -->
+  <!-- Get In Touch Section Begin -->
+    <div class="gettouch-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-map-marker"></i>
+                        <p>mig 67 <br/> sonagiri bhopal</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-mobile"></i>
+                        <ul>
+                            <li>8770771796</li>
+                            <li>9179392239</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text email">
+                        <i class="fa fa-envelope"></i>
+                        <p>aamirqureshi@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Get In Touch Section End -->
+
+
+{% endblock %}

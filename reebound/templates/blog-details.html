@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+    <!-- Blog Details Hero Section Begin -->
+{% for i in blogg %}
+    <section class="blog-details-hero set-bg" data-setbg="{{ i.image.url }}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="bh-text">
+                        <h3>{{ i.heading }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endfor %}
+    <!-- Blog Details Hero Section End -->
+
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua accusantium doloremque laudantium. Excepteur
+                                sint occaecat cupidatat non proident sculpa .</p>
+
+                            </p>
+                        </div>
+                        <div class="blog-details-pic">
+                            <div class="blog-details-pic-item">
+                                <img src="img/blog/details/details-1.jpg" alt="">
+                            </div>
+                            <div class="blog-details-pic-item">
+                                <img src="img/blog/details/details-2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Section End -->
+
+ {% endblock %}
